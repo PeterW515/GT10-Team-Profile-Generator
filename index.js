@@ -6,6 +6,9 @@ const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 
+//add helper template class
+const generateHTML = require('./src/generateHTML');
+
 //employee array
 let employees = [];
 
@@ -104,6 +107,11 @@ function addIntern() {
 
 }
 
+//build html page
+function buildTeam(employees) {
+    generateHTML(employees);
+}
+
 //display menu after adding manager
 function mainMenu() {
     //prompt to add engineer, intern, or exit
@@ -127,8 +135,7 @@ function mainMenu() {
         } else if (answers.choice === 'Add an intern to the team') {
             addIntern();
         } else if(answers.choice === 'Finish building the team'){
-            //buildTeam();
-            console.log(employees)
+            buildTeam(employees);
         }
     })
 }
