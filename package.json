@@ -4,7 +4,8 @@
   "description": "This command line Node app accepts input on team members' backgrounds and outputs a nicely formatted HTML page.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
   },
   "repository": {
     "type": "git",

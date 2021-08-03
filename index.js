@@ -1,5 +1,6 @@
 //add inquirer
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 //add employee classes
 const Manager = require('./lib/manager');
@@ -107,9 +108,16 @@ function addIntern() {
 
 }
 
+//write html file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName,data, (err) =>
+        err ? console.log(err) : console.log('Success!'));
+} 
+
 //build html page
 function buildTeam(employees) {
-    generateHTML(employees);
+    let data = generateHTML(employees);
+    writeToFile('./dist/index.html',data);
 }
 
 //display menu after adding manager
