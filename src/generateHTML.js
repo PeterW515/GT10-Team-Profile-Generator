@@ -2,7 +2,7 @@ function generateHTML(employees) {
     let employeeCardHtml = '';
     employees.forEach((employee) => {
         if (employee.officeNumber) {
-            employeeCardHtml.concat(employeeCardHtml, `<div class="card mx-auto" style="width: 18rem;">
+            employeeCardHtml = employeeCardHtml.concat(`<div class="card mx-auto" style="width: 18rem;">
             <div class="card-header">
                 ${employee.name}
             </div>
@@ -16,7 +16,7 @@ function generateHTML(employees) {
             </ul>
         </div>`);
         } else if (employee.github) {
-            employeeCardHtml.concat(employeeCardHtml, `<div class="card mx-auto" style="width: 18rem;">
+            employeeCardHtml = employeeCardHtml.concat(`<div class="card mx-auto" style="width: 18rem;">
             <div class="card-header">
                 ${employee.name}
             </div>
@@ -30,7 +30,7 @@ function generateHTML(employees) {
             </ul>
         </div>`);
         } else {
-            employeeCardHtml.concat(employeeCardHtml, `<div class="card mx-auto" style="width: 18rem;">
+            employeeCardHtml = employeeCardHtml.concat(`<div class="card mx-auto" style="width: 18rem;">
             <div class="card-header">
             ${employee.name}
             </div>
@@ -45,6 +45,8 @@ function generateHTML(employees) {
         </div>`)
         }
     })
+
+    console.log(employeeCardHtml);
 
     return `<!DOCTYPE html>
     <html lang="en">
