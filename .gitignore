@@ -3,3 +3,6 @@ node_modules/
 
 #DS store
 .DS_Store
+
+#existing index.html pages
+index.html
