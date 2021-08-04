@@ -11,6 +11,12 @@
   
   
   ![image](https://user-images.githubusercontent.com/78565748/128105501-5781116c-30c0-4528-be59-24b6cff84cf9.png)
+  
+  Here is a screenshot of the HTML output:
+  
+  
+  ![image](https://user-images.githubusercontent.com/78565748/128105623-423d3817-0c41-429b-af81-745b1b212b62.png)
+
 
 
   ---
