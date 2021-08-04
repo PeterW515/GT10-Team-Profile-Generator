@@ -4,43 +4,43 @@ function generateHTML(employees) {
         if (employee.officeNumber) {
             employeeCardHtml = employeeCardHtml.concat(`<div class="card mx-auto" style="width: 18rem;">
             <div class="card-header">
-                <h3>${employee.name}<h3>
+                <h3>${employee.getName()}<h3>
             </div>
             <div class="card-header">
-                Manager
+                ${employee.getRole()}
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${employee.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${employee.email}">${employee.email}</a></li>
-                <li class="list-group-item">Office: ${employee.office}</li>
+                <li class="list-group-item">ID: ${employee.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+                <li class="list-group-item">Office: ${employee.getOfficeNumber()}</li>
             </ul>
         </div>`);
         } else if (employee.github) {
             employeeCardHtml = employeeCardHtml.concat(`<div class="card mx-auto" style="width: 18rem;">
             <div class="card-header">
-                <h3>${employee.name}<h3>
+                <h3>${employee.getName()}<h3>
             </div>
             <div class="card-header">
-                Engineer
+            ${employee.getRole()}
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${employee.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${employee.email}">${employee.email}</a></li>
-                <li class="list-group-item">Github: <a href='https://github.com/${employee.github}'>${employee.github}</a></li>
+                <li class="list-group-item">ID: ${employee.getId()}</li>
+                <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+                <li class="list-group-item">Github: <a href='https://github.com/${employee.getGithub()}'>${employee.getGithub()}</a></li>
             </ul>
         </div>`);
         } else {
             employeeCardHtml = employeeCardHtml.concat(`<div class="card mx-auto" style="width: 18rem;">
             <div class="card-header">
-            <h3>${employee.name}<h3>
+            <h3>${employee.getName()}<h3>
             </div>
             <div class="card-header">
-                Intern
+            ${employee.getRole()}
             </div>
             <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID: ${employee.id}</li>
-            <li class="list-group-item">Email: <a href="mailto:${employee.email}">${employee.email}</a></li>
-            <li class="list-group-item">School: ${employee.school}</li>
+            <li class="list-group-item">ID: ${employee.getId()}</li>
+            <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+            <li class="list-group-item">School: ${employee.getSchool()}</li>
             </ul>
         </div>`)
         }
