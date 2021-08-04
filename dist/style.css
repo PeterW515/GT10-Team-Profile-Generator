@@ -14,4 +14,6 @@ header {
 
 .card-header {
     background-color:deepskyblue;
+    color:white;
+    font-weight: bold;
 }

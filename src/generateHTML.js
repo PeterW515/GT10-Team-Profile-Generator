@@ -4,7 +4,7 @@ function generateHTML(employees) {
         if (employee.officeNumber) {
             employeeCardHtml = employeeCardHtml.concat(`<div class="card mx-auto" style="width: 18rem;">
             <div class="card-header">
-                ${employee.name}
+                <h3>${employee.name}<h3>
             </div>
             <div class="card-header">
                 Manager
@@ -18,7 +18,7 @@ function generateHTML(employees) {
         } else if (employee.github) {
             employeeCardHtml = employeeCardHtml.concat(`<div class="card mx-auto" style="width: 18rem;">
             <div class="card-header">
-                ${employee.name}
+                <h3>${employee.name}<h3>
             </div>
             <div class="card-header">
                 Engineer
@@ -32,7 +32,7 @@ function generateHTML(employees) {
         } else {
             employeeCardHtml = employeeCardHtml.concat(`<div class="card mx-auto" style="width: 18rem;">
             <div class="card-header">
-            ${employee.name}
+            <h3>${employee.name}<h3>
             </div>
             <div class="card-header">
                 Intern
